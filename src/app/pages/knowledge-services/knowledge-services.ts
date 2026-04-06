@@ -19,7 +19,7 @@ export class KnowledgeServices {
       icon: 'images/home/white/knowledgemodeling.png',
       title: 'Knowledge Modelling',
       fragment: 'knowledge-modelling',
-      description: "Define structured semantic representations of clinical entities, regulatory dependencies, workflows, and scientific relationships—establishing the foundation for context-aware validation and reasoning.."
+      description: "Define structured semantic representations of clinical entities, regulatory dependencies, workflows, and scientific relationships—establishing the foundation for context-aware validation and reasoning."
     },
     {
       link: '/services-explore',
