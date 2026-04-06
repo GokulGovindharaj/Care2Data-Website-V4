@@ -180,7 +180,7 @@
       <!-- Dots -->
       <div class="flex justify-center gap-2 md:mt-6 lg:mt-5">
         <div *ngFor="let d of approch; let i = index" (click)="goTo(i)"
-          class="w-[9px] h-[9px] xl:w-[10px] xl:h-[10px] rounded-full cursor-pointer transition-all duration-300"
+          class="w-[9px] h-[9px] rounded-full cursor-pointer transition-all duration-300"
           [ngClass]="i === active ? 'bg-yellow-400 scale-105' : 'bg-white/30'">
         </div>
       </div>

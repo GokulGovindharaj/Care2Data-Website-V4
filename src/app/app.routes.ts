@@ -10,6 +10,9 @@ import { Engagement } from './pages/engagement/engagement';
 import { SyntheticGen } from './pages/synthetic-gen/synthetic-gen';
 import { ClinicalIntelligence } from './pages/clinical-intelligence/clinical-intelligence';
 import { ServicesExplore } from './pages/services-explore/services-explore';
+import { TermsConditions } from './pages/terms-conditions/terms-conditions';
+import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
+import { Accessibility } from './pages/accessibility/accessibility';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -23,6 +26,9 @@ export const routes: Routes = [
   { path: 'synthetic-gen', component: SyntheticGen },
   { path: 'clinical-intelligence', component: ClinicalIntelligence },
   { path: 'services-explore', component: ServicesExplore },
+  { path: 'privacy-policy', component: PrivacyPolicy },
+  { path: 'terms-conditions', component: TermsConditions },
+  { path: 'accessibility', component: Accessibility },
   // Wildcard MUST be last
   { path: '**', redirectTo: '' }
 ];

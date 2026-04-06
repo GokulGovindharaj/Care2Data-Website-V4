@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center bg-[#11193e] overflow-hidde">
+<section class="relative min-h-screen py-20 flex items-center bg-[#11193e] overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="max-w-5xl mx-auto text-center mb-5">
@@ -28,7 +28,7 @@
                 </p>
 
                 <!-- Outcome Strip -->
-                <div class="mt-5 border-y border-white/10 py-6">
+                <div class="border-y border-white/10 py-6">
 
                     <p class="text-xs sm:text-xl font-senibold tracking-wider uppercase font-medium text-yellow-400">
                         Fewer queries • Faster validation cycles • Higher accuracy
@@ -299,7 +299,7 @@
             <!-- Dots -->
             <div class="flex justify-center gap-2 lg:mt-5">
                 <div *ngFor="let d of cards; let i = index" (click)="goTo(i)"
-                    class="w-[9px] h-[9px] xl:w-[10px] xl:h-[10px] rounded-full cursor-pointer transition-all duration-300"
+                    class="w-[9px] h-[9px] rounded-full cursor-pointer transition-all duration-300"
                     [ngClass]="i === active ? 'bg-yellow-400 scale-105' : 'bg-white/30'">
                 </div>
             </div>
@@ -611,7 +611,7 @@
     <div class="max-w-7xl mx-auto px-6">
 
         <!-- Heading -->
-        <div class="max-w-3xl mx-auto text-center mb-5">
+        <div class="max-w-5xl mx-auto text-center mb-5">
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-center font-heading">
                 Operational Visibility
                 <span class="text-secondary">Across Studies</span>
@@ -623,72 +623,74 @@
             <p class="text-base md:text-lg text-secondary text-center my-5 font-semibold">
                 Teams can instantly view:
             </p>
-        </div>
 
-        <!-- Features Grid -->
-        <div class="grid md:grid-cols-2 gap-8 mb-5">
 
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/undervalidation.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-5">
+
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/undervalidation.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Active studies under validation
+                    </p>
                 </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Active studies under validation
-                </p>
+
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/compliancestatus.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Rule compliance status
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/validationprogress.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Validation progress milestones
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/domainlevelviolation.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Domain-level violation summaries
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/validationtrend.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Validation trend analysis across multiple runs
+                    </p>
+                </div>
+
             </div>
 
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/compliancestatus.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Rule compliance status
+            <!-- Description Paragraph -->
+            <div class="text-justify text-white mb-5 mt-5">
+                <p class="text-base md:text-lg leading-relaxed">
+                    <span class="text-xl md:text-2xl font-semibold">Includes intelligent grouping of related errors and
+                        prioritization—addressing a
+                        major pain point where teams struggle to identify affected records and error clusters
+                        efficiently.
+                    </span><br><br>
+                    This enables proactive issue resolution and faster submission readiness.
                 </p>
             </div>
-
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/validationprogress.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Validation progress milestones
-                </p>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/domainlevelviolation.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Domain-level violation summaries
-                </p>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/validationtrend.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Validation trend analysis across multiple runs
-                </p>
-            </div>
-
-        </div>
-
-        <!-- Description Paragraph -->
-        <div class="max-w-4xl mx-auto text-justify text-white mb-5 mt-5">
-            <p class="text-base md:text-lg leading-relaxed">
-                <span class="text-xl md:text-2xl font-semibold">Includes intelligent grouping of related errors and
-                    prioritization—addressing a
-                    major pain point where teams struggle to identify affected records and error clusters efficiently.
-                </span><br><br>
-                This enables proactive issue resolution and faster submission readiness.
-            </p>
         </div>
 
         <!-- CTA -->
@@ -806,119 +808,119 @@
     <div class="max-w-7xl mx-auto px-6">
 
         <!-- Section Heading -->
-        <div class="text-center max-w-3xl mx-auto mb-5">
+        <div class="text-center max-w-5xl mx-auto mb-5">
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-center font-heading">
                 Why Enterprise Teams Are Moving
                 <span class="text-secondary">Beyond Traditional Validation Tools</span>
             </h2>
             <p class="text-white text-base md:text-lg leading-relaxed">
-                Many clinical validation tools in the market rely on static rule execution engines. <br> <br>
+                Many clinical validation tools in the market rely on static rule execution engines. <br>
                 While these systems can detect rule violations, they often require extensive manual investigation to
                 understand the root cause and downstream impact of errors.
             </p>
-        </div>
 
-        <p class="text-base md:text-lg text-secondary text-center my-5 font-semibold">
-            Common limitations of traditional validation tools include:
-        </p>
-        <!-- Limitations Cards -->
-        <div class="grid md:grid-cols-2 gap-4 mb-5">
-
-            <div class="flex items-center gap-4 p-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/crossdataset.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Limited cross-dataset reasoning
-                </p>
-            </div>
-
-            <div class="flex items-center gap-4 p-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/knowledgegraph.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Lack of contextual validation logic
-                </p>
-            </div>
-
-            <div class="flex items-center gap-4 p-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/issueresolution.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Minimal guidance for issue resolution
-                </p>
-            </div>
-
-            <div class="flex items-center gap-4 p-4">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
-                    <img src="images/kwalify/white/fragmentedvisibility.png" alt=""
-                        class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
-                </div>
-                <p class="text-white text-base md:text-lg leading-relaxed">
-                    Fragmented visibility across studies
-                </p>
-            </div>
-
-        </div>
-
-        <p class="text-base md:text-lg text-secondary text-center my-5 font-semibold">
-            These gaps are consistently reflected in user feedback:
-        </p>
-        <!-- User Feedback Cards -->
-        <div class="grid md:grid-cols-3 gap-6 mb-5">
-            <div
-                class="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition duration-300 text-center">
-                <p
-                    class="text-[var(--secondary-color)] group-hover:text-[var(--primary-color)] transitiontext-lg lg:text-xl font-semibold mb-2">
-                    41%</p>
-                <p class="text-white text-base md:text-lg">Vague error messages</p>
-            </div>
-
-            <div
-                class="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition duration-300 text-center">
-                <p
-                    class="text-[var(--secondary-color)] group-hover:text-[var(--primary-color)] transitiontext-lg lg:text-xl font-semibold mb-2">
-                    47%</p>
-                <p class="text-white text-base md:text-lg">No prioritization</p>
-            </div>
-
-            <div
-                class="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition duration-300 text-center">
-                <p
-                    class="text-[var(--secondary-color)] group-hover:text-[var(--primary-color)] transitiontext-lg lg:text-xl font-semibold mb-2">
-                    35%</p>
-                <p class="text-white text-base md:text-lg">Difficulty identifying affected records</p>
-            </div>
-        </div>
-
-        <!-- Description Paragraph -->
-        <div class="max-w-3xl mx-auto text-justify text-white mb-5">
-            <p class="text-base md:text-lg leading-relaxed">
-                KWALIFY™ addresses these gaps through an intelligence-driven validation architecture. <br> <br>
-                By combining semantic reasoning, anomaly verification, and explainable AI validation outputs, KWALIFY
-                enables teams to move beyond simple rule checking toward comprehensive data integrity assurance.<br>
-                <br>
-                The result is a validation process that is not only faster—but also more accurate, consistent and
-                scalable under regulatory scrutiny.
+            <p class="text-base md:text-lg text-secondary text-center my-5 font-semibold">
+                Common limitations of traditional validation tools include:
             </p>
-        </div>
+            <!-- Limitations Cards -->
+            <div class="grid md:grid-cols-2 gap-4 mb-5">
 
-        <!-- CTA -->
-        <div class="text-center">
-            <button
-                class="inline-flex items-center cursor-pointer uppercase gap-2 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300"
-                style="background-color: var(--btn-primary-color); color: #fff;"
-                onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
-                onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
-                Discover the KWALIFY™ Advantage →
-            </button>
-        </div>
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/crossdataset.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Limited cross-dataset reasoning
+                    </p>
+                </div>
 
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/knowledgegraph.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Lack of contextual validation logic
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/issueresolution.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Minimal guidance for issue resolution
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary shrink-0 mb-2">
+                        <img src="images/kwalify/white/fragmentedvisibility.png" alt=""
+                            class="w-7 h-7 md:w-8 md:h-8 object-contain flex-shrink-0">
+                    </div>
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        Fragmented visibility across studies
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="text-base md:text-lg text-secondary text-center my-5 font-semibold">
+                These gaps are consistently reflected in user feedback:
+            </p>
+            <!-- User Feedback Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-5">
+                <div
+                    class="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition duration-300 text-center">
+                    <p
+                        class="text-[var(--secondary-color)] group-hover:text-[var(--primary-color)] transitiontext-lg lg:text-xl font-semibold mb-2">
+                        41%</p>
+                    <p class="text-white text-base md:text-lg">Vague error messages</p>
+                </div>
+
+                <div
+                    class="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition duration-300 text-center">
+                    <p
+                        class="text-[var(--secondary-color)] group-hover:text-[var(--primary-color)] transitiontext-lg lg:text-xl font-semibold mb-2">
+                        47%</p>
+                    <p class="text-white text-base md:text-lg">No prioritization</p>
+                </div>
+
+                <div
+                    class="bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 transition duration-300 text-center">
+                    <p
+                        class="text-[var(--secondary-color)] group-hover:text-[var(--primary-color)] transitiontext-lg lg:text-xl font-semibold mb-2">
+                        35%</p>
+                    <p class="text-white text-base md:text-lg">Difficulty identifying affected records</p>
+                </div>
+            </div>
+
+            <!-- Description Paragraph -->
+            <div class="text-justify text-white mb-5">
+                <p class="text-base md:text-lg leading-relaxed">
+                    KWALIFY™ addresses these gaps through an intelligence-driven validation architecture. <br> <br>
+                    By combining semantic reasoning, anomaly verification, and explainable AI validation outputs,
+                    KWALIFY
+                    enables teams to move beyond simple rule checking toward comprehensive data integrity assurance.<br>
+                    <br>
+                    The result is a validation process that is not only faster—but also more accurate, consistent and
+                    scalable under regulatory scrutiny.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center">
+                <button
+                    class="inline-flex items-center cursor-pointer uppercase gap-2 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300"
+                    style="background-color: var(--btn-primary-color); color: #fff;"
+                    onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
+                    onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
+                    Discover the KWALIFY™ Advantage →
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1171,7 +1173,7 @@
                 <span class="text-secondary">Full Clinical Data Lifecycle</span>
             </h2>
             <!-- LEFT CONTENT -->
-            <div class="max-w-3xl mx-auto text-justify mb-5">
+            <div class="max-w-3xl mx-auto text-center mb-5">
 
                 <p class="text-white text-base md:text-lg leading-relaxed mb-5">
                     KWALIFY™ is designed as a validation platform, not just a submission checker.
@@ -1237,7 +1239,7 @@
     </div>
 </section>
 
-<!-- Final Conversion -->
+<!-- See the Intelligence Layer -->
 <section class="py-8 bg-[#114167] text-white">
 
     <div class="max-w-5xl mx-auto px-6 text-center z-10">
@@ -1291,7 +1293,8 @@
         <!-- Heading -->
         <h2
             class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-center mb-5 text-yellow-400 leading-tight">
-            <span style="color: #fff">Compliance is routine. </span> <br>Confidence is driven by accuracy, consistency, and
+            <span style="color: #fff">Compliance is routine. </span> <br>Confidence is driven by accuracy, consistency,
+            and
             scalability.
         </h2>
 
