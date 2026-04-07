@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { debounceTime, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-engagement',
@@ -11,51 +12,56 @@ import { RouterModule } from '@angular/router';
   styleUrl: './engagement.scss',
 })
 export class Engagement {
-  sections: any = [
-    {
-      title: "Solution Consulting",
-      headline: "Strategy Before Systems",
-      regulatory_durability_statement:
-        "The result is a structured, executable intelligence blueprint aligned to regulatory expectations.",
-      cta: "Begin with Strategic Intelligence Consulting"
-    },
 
+  approch: any = [
     {
-      title: "Proof of Concepts (PoCs)",
-      headline: "Validate Structural Assumptions Before They Become Risk",
-      cta: "Run a Structural PoC"
+      link: '/services-explore',
+      icon: '01',
+      title: 'Solution Consulting',
+      description: "Define high-impact knowledge use cases aligned with regulatory defensibility, submission readiness, and clinical data transparency."
     },
-
     {
-      title: "Design & Development",
-      headline: "Built for Scrutiny — Not Just Functionality"
+      link: '/services-explore',
+      icon: '02',
+      title: 'Proof of Concepts (PoCs)',
+      description: "Validate feasibility and demonstrate value through targeted pilots across clinical datasets and validation workflows."
     },
-
     {
-      title: "Data Quality Checking — And What Happens Next",
-      headline: "Validation Is Governance in Motion"
+      link: '/services-explore',
+      icon: '03',
+      title: 'Design & Development',
+      description: "Engineer semantic models, knowledge architectures, and validation frameworks tailored to clinical programs."
     },
-
     {
-      title: "Knowledge Model",
-      headline: "Knowledge Must Become Infrastructure"
+      link: '/services-explore',
+      icon: '04',
+      title: 'Data Quality Checking — And What Happens Next',
+      description: "Assess data quality, identify gaps, and transition from issue detection to structured validation and verification frameworks."
     },
-
     {
-      title: "How Engagements Progress",
-      headline: "A Structured Maturity Framework",
+      link: '/services-explore',
+      icon: '05',
+      title: 'Knowledge Model Implementation',
+      description: "Develop and operationalise ontology-driven knowledge models and interlinked data systems."
     },
-
     {
-      title: "Training & Handover",
-      headline: "Ownership Is the Final Deliverable",
-      cta: "Schedule a Strategic Consultation"
+      link: '/services-explore',
+      icon: '06',
+      title: 'Training & Handover (BOT Model)',
+      description: "Enable teams to manage, extend, and scale systems independently through structured training and capability transfer."
     }
   ];
 
-  groupedCards: any[][] = [];
-  currentIndex = 0;
-
+  active = 0;
+  timer: any;
+  isMobile = false;
+  isTablet = false;
+  positions: any = {
+    center: { x: 0, z: 0, scale: 1.15, opacity: 1, blur: 0, border: 'rgba(250,204,21,0.6)' },
+    left: { x: -220, z: -80, scale: 0.8, opacity: 0.55, blur: 1.5, border: 'rgba(255,255,255,0.1)' },
+    right: { x: 220, z: -80, scale: 0.8, opacity: 0.55, blur: 1.5, border: 'rgba(255,255,255,0.1)' },
+    hidden: { x: 0, z: -200, scale: 0.5, opacity: 0, blur: 4, border: 'rgba(255,255,255,0.05)' }
+  };
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
@@ -95,30 +101,82 @@ export class Engagement {
       content: 'Discover Care2Data engagement architecture and service offerings including solution consulting, PoCs, design & development, and training for clinical data intelligence.'
     });
 
-    // Auto-advance sections
-    setInterval(() => {
-      this.next();
-    }, 15000);
-
+    this.checkDevice();
+    fromEvent(window, 'resize')
+      .pipe(debounceTime(200))
+      .subscribe(() => this.checkDevice());
+    this.startAutoSlide();
   }
 
-  next() {
-    if (this.currentIndex < this.sections.length - 1) {
-      this.currentIndex++;
+  checkDevice() {
+    const w = window.innerWidth;
+
+    this.isMobile = w < 640;       // Tailwind sm
+    this.isTablet = w >= 640 && w < 1024; // md
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.timer);
+  }
+
+  getPos(i: number) {
+    const total = this.approch.length;
+    const diff = ((i - this.active) % total + total) % total;
+
+    if (diff === 0) return 'center';
+    if (diff === 1) return 'right';
+    if (diff === total - 1) return 'left';
+    return 'hidden';
+  }
+
+  getStyles(i: number) {
+    const pos = this.positions[this.getPos(i)];
+    const type = this.getPos(i);
+
+    let scale = pos.scale;
+
+    // 🔥 Device-based override
+    if (this.isMobile) {
+      scale = type === 'center' ? 0.9 : 0.8;
+    } else if (this.isTablet) {
+      scale = type === 'center' ? 1 : 0.85;
     } else {
-      this.currentIndex = 0;
+      scale = type === 'center' ? 1.1 : 0.9;
+    }
+
+    return {
+      transform: `translateX(${pos.x}px) translateZ(${pos.z}px) scale(${scale})`,
+      opacity: pos.opacity,
+      filter: `blur(${pos.blur}px)`,
+      borderColor: pos.border,
+      zIndex: type === 'center' ? 5 : type === 'hidden' ? 0 : 2
+    };
+  }
+
+  go(dir: number) {
+    const total = this.approch.length;
+    this.active = ((this.active + dir) % total + total) % total;
+    this.resetTimer();
+  }
+
+  goTo(i: number) {
+    this.active = i;
+    this.resetTimer();
+  }
+
+  onCardClick(i: number) {
+    if (i !== this.active) {
+      this.active = i;
+      this.resetTimer();
     }
   }
 
-  prev() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    } else {
-      this.currentIndex = this.sections.length - 1;
-    }
+  startAutoSlide() {
+    this.timer = setInterval(() => this.go(1), 10000); // 10s per slide
   }
 
-  goTo(index: number) {
-    this.currentIndex = index;
+  resetTimer() {
+    clearInterval(this.timer);
+    this.startAutoSlide();
   }
 }
