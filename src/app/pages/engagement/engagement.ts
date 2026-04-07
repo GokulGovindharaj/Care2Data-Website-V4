@@ -15,39 +15,45 @@ export class Engagement {
 
   approch: any = [
     {
-      link: '/services-explore',
+      link: '/models-explore',
       icon: '01',
       title: 'Solution Consulting',
+      fragment: 'solution-consulting',
       description: "Define high-impact knowledge use cases aligned with regulatory defensibility, submission readiness, and clinical data transparency."
     },
     {
-      link: '/services-explore',
+      link: '/models-explore',
       icon: '02',
       title: 'Proof of Concepts (PoCs)',
+      fragment: 'poc-section',
       description: "Validate feasibility and demonstrate value through targeted pilots across clinical datasets and validation workflows."
     },
     {
-      link: '/services-explore',
+      link: '/models-explore',
       icon: '03',
       title: 'Design & Development',
+      fragment: 'design-development',
       description: "Engineer semantic models, knowledge architectures, and validation frameworks tailored to clinical programs."
     },
     {
-      link: '/services-explore',
+      link: '/models-explore',
       icon: '04',
       title: 'Data Quality Checking — And What Happens Next',
+      fragment: 'data-quality',
       description: "Assess data quality, identify gaps, and transition from issue detection to structured validation and verification frameworks."
     },
     {
-      link: '/services-explore',
+      link: '/models-explore',
       icon: '05',
       title: 'Knowledge Model Implementation',
+      fragment: 'knowledge-model',
       description: "Develop and operationalise ontology-driven knowledge models and interlinked data systems."
     },
     {
-      link: '/services-explore',
+      link: '/models-explore',
       icon: '06',
       title: 'Training & Handover (BOT Model)',
+      fragment: 'training-handover',
       description: "Enable teams to manage, extend, and scale systems independently through structured training and capability transfer."
     }
   ];

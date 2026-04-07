@@ -10,11 +10,11 @@
                 <i class="block text-yellow-400 mt-2">Data Intelligence</i>
             </h1>
 
-            <p class="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
+            <p class="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed mb-4">
                 Clinical trial data challenges are not only technical—they are structural.
             </p>
 
-            <p class="text-lg text-gray-300 max-w-5xl mx-auto leading-relaxed mb-4">
+            <p class="text-lg text-white max-w-5xl mx-auto leading-relaxed mb-4">
                 Care2Data partners with life sciences organizations to embed <strong class="text-secondary">semantic
                     intelligence, validation &
                     verification, and governance frameworks</strong> into clinical data operations—without disrupting
@@ -22,7 +22,7 @@
                 systems.
             </p>
 
-            <p class="text-lg text-gray-300 max-w-5xl mx-auto leading-relaxed">
+            <p class="text-lg text-white max-w-5xl mx-auto leading-relaxed">
                 We deliver <strong class="text-secondary">inspection-ready, knowledge-driven data environments</strong>
                 that strengthen regulatory defensibility
                 and submission confidence.
@@ -42,7 +42,7 @@
                     <h4 class="text-xl font-semibold mb-3 text-secondary">
                         Advisory & Architecture
                     </h4>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="text-white leading-relaxed">
                         Define knowledge-driven validation strategies
                     </p>
                 </div>
@@ -52,7 +52,7 @@
                     <h4 class="text-xl font-semibold mb-3 text-secondary">
                         Implementation
                     </h4>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="text-white leading-relaxed">
                         Deploy semantic intelligence and validation frameworks
                     </p>
                 </div>
@@ -62,7 +62,7 @@
                     <h4 class="text-xl font-semibold mb-3 text-secondary">
                         Validation & Verification
                     </h4>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="text-white leading-relaxed">
                         Ensure data quality across the trial lifecycle
                     </p>
                 </div>
@@ -72,7 +72,7 @@
                     <h4 class="text-xl font-semibold mb-3 text-secondary">
                         Enablement (BOT Model)
                     </h4>
-                    <p class="text-gray-300 leading-relaxed">
+                    <p class="text-white leading-relaxed">
                         Build, operate, and transfer capabilities
                     </p>
                 </div>
@@ -121,7 +121,7 @@
     </div>
 </section>
 
-<section class="bg-[#102c50] py-12 md:py-16">
+<section class="bg-[#102c50] py-8">
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-5xl mx-auto text-center mb-4">
             <!-- Heading -->
@@ -159,11 +159,14 @@
 
                     <!-- Description / Content -->
                     <div class="mt-auto md:pt-0 lg:pt-2">
-                        <button [routerLink]="card.link" [fragment]="card.fragment"
-                            class="inline-flex items-center cursor-pointer uppercase gap-2 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300"
-                            style="background-color: var(--btn-primary-color); color: #fff;">
+                        <a [routerLink]="[card.link]" [fragment]="card.fragment" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-block text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
+                            style="background-color: var(--btn-primary-color); color: #fff;"
+                            onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
+                            onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
                             Read More →
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -247,13 +250,176 @@
         </div>
         <!-- CTA -->
         <div class="text-center mt-5">
-            <button routerLink="/engagement-models"
-                class="text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
+            <a [routerLink]="['/models-explore']" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
                 style="background-color: var(--btn-primary-color); color: #fff;"
                 onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
                 onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
                 Explore Engagement Models in Detail →
-            </button>
+            </a>
         </div>
+    </div>
+</section>
+
+<!-- A Structured Maturity Framework -->
+<section class="bg-[#114167] text-white py-8">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- 🔷 HEADER -->
+        <div class="text-center mb-5">
+            <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-center mb-5 text-yellow-400 leading-tight">
+                <span style="color: #fff">A Structured</span> Maturity Framework
+            </h2>
+            <p class="max-w-4xl mx-auto leading-relaxed">
+                Care2Data engagements follow a structured progression—ensuring that clinical data intelligence is not
+                only implemented, but <strong class="text-secondary">validated, governed, and sustained over
+                    time</strong>.
+                <br>
+                This framework underpins how organizations move from fragmented data environments to <strong
+                    class="text-secondary">interlinked,
+                    intelligence-driven, and submission-ready systems</strong>.
+            </p>
+        </div>
+
+        <!-- 🔷 PROGRESSION CARDS -->
+        <div class="mb-5">
+            <h3 class="text-2xl md:text-3xl font-semibold text-primary text-center mb-5">
+                Engagement Progression
+            </h3>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- CARD -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:scale-105 transition">
+                    <h4 class="text-yellow-400 font-semibold mb-2">
+                        1. Structural Clarity & Alignment
+                    </h4>
+                    <p class="text-white text-sm">
+                        Define expectations, regulatory standards, and structural assumptions across clinical data
+                        systems, validation logic, and submission requirements.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:scale-105 transition">
+                    <h4 class="text-yellow-400 font-semibold mb-2">
+                        2. Controlled Validation (PoCs)
+                    </h4>
+                    <p class="text-white text-sm">
+                        Validate architectural and validation assumptions through structured PoCs—identifying risks,
+                        inconsistencies, and scalability challenges early.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:scale-105 transition">
+                    <h4 class="text-yellow-400 font-semibold mb-2">
+                        3. Design & Deployment
+                    </h4>
+                    <p class="text-white text-sm">
+                        Implement semantic models, knowledge architectures, and validation & verification frameworks
+                        within existing ecosystems.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:scale-105 transition">
+                    <h4 class="text-yellow-400 font-semibold mb-2">
+                        4. Governance & Lifecycle Stabilisation
+                    </h4>
+                    <p class="text-white text-sm">
+                        Establish traceability, governance controls, and lifecycle management frameworks to ensure
+                        regulatory alignment and long-term resilience.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:scale-105 transition">
+                    <h4 class="text-yellow-400 font-semibold mb-2">
+                        5. Capability Transfer & Scale
+                    </h4>
+                    <p class="text-white text-sm">
+                        Enable teams through training and BOT models to independently operate, extend, and scale
+                        clinical data intelligence systems.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 🔷 TRANSFORMATION FLOW -->
+        <div class="text-center mb-5">
+            <h3 class="text-2xl md:text-3xl font-semibold text-primary mb-8">
+                From Engagement to Enduring Capability
+            </h3>
+
+            <p class="text-white max-w-4xl mx-auto mb-8">
+                Care2Data engagements are designed not just to deliver systems—but to establish <strong
+                    class="text-secondary">sustainable,
+                    knowledge-driven operating models</strong>.
+            </p>
+            <p class="text-base md:text-lg text-secondary text-center mb-4 font-semibold">
+                The outcome is a transition from:
+            </p>
+            <!-- FLOW -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-medium">
+
+                <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10">Fragmented Data</span>
+                <span class="text-primary">→</span>
+
+                <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10">Structured Knowledge</span>
+                <span class="text-primary">→</span>
+
+                <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10">Clinical Intelligence</span>
+                <span class="text-primary">→</span>
+
+                <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10">Defensible Submissions</span>
+
+            </div>
+            <p class="text-base md:text-lg text-secondary text-center my-4 font-semibold">
+                Organizations gain:
+            </p>
+            <!-- BENEFITS -->
+            <div class="grid md:grid-cols-2 gap-4 text-white max-w-4xl mx-auto mt-5 text-left">
+                <p>• Consistent, submission-ready datasets</p>
+                <p>• Governed validation and verification processes</p>
+                <p>• Reduced dependency on manual intervention</p>
+                <p>• Scalable systems aligned with regulatory expectations</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Final Conversion -->
+<section class="py-8 bg-[#11193e]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <p class="text-white max-w-3xl mx-auto leading-relaxed mb-5 text-base md:text-lg text-left md:text-center">
+            Clinical data quality is not achieved at the point of submission.
+            It is engineered across the lifecycle. <br> <br> Care2Data enables organizations to move beyond validation
+            as a task—
+            <strong class="text-secondary">toward validation and verification as a governed, intelligence-driven system
+                of assurance</strong>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
+
+            <button routerLink="/contact-us"
+                class="text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
+                style="background-color: var(--btn-primary-color); color: #fff;"
+                onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
+                onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
+                Architect Your Engagement→
+            </button>
+
+            <button
+                class="text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
+                style="background-color: var(--btn-primary-color); color: #fff;"
+                onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
+                onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
+                Contact Us →
+            </button>
+
+        </div>
+
     </div>
 </section>

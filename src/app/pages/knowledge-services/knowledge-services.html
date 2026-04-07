@@ -326,11 +326,14 @@
 
                     <!-- Description / Content -->
                     <div class="mt-auto md:pt-5 lg:pt-2">
-                        <button [routerLink]="card.link" [fragment]="card.fragment"
-                            class="inline-flex items-center cursor-pointer uppercase gap-2 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300"
-                            style="background-color: var(--btn-primary-color); color: #fff;">
+                        <a [routerLink]="[card.link]" [fragment]="card.fragment" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-block text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
+                            style="background-color: var(--btn-primary-color); color: #fff;"
+                            onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
+                            onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
                             Read More →
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -460,7 +463,8 @@
 
         <div class="text-white leading-relaxed text-base md:text-lg text-justify">
             <p>
-                Care2Data offers <strong class="text-secondary">end-to-end validation and verification of clinical trial data</strong> as a dedicated
+                Care2Data offers <strong class="text-secondary">end-to-end validation and verification of clinical trial
+                    data</strong> as a dedicated
                 capability—enabled through the KWALIFY platform—ensuring data quality, integrity, consistency, and
                 conformance across the entire clinical trial lifecycle. <br> <br>
                 By combining semantic intelligence, reasoning-driven validation, and verification frameworks, Care2Data
