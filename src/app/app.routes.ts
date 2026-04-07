@@ -13,6 +13,7 @@ import { ServicesExplore } from './pages/services-explore/services-explore';
 import { TermsConditions } from './pages/terms-conditions/terms-conditions';
 import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
 import { Accessibility } from './pages/accessibility/accessibility';
+import { ModelsExplore } from './pages/models-explore/models-explore';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'knowledge-services', component: KnowledgeServices },
   { path: 'news', component: News },
   { path: 'engagement-models', component: Engagement },
+  { path: 'models-explore', component: ModelsExplore },
   { path: 'synthetic-gen', component: SyntheticGen },
   { path: 'clinical-intelligence', component: ClinicalIntelligence },
   { path: 'services-explore', component: ServicesExplore },
