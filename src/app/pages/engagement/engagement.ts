@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { debounceTime, fromEvent } from 'rxjs';
+import { debounceTime, fromEvent, interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-engagement',
@@ -68,6 +68,17 @@ export class Engagement {
     right: { x: 220, z: -80, scale: 0.8, opacity: 0.55, blur: 1.5, border: 'rgba(255,255,255,0.1)' },
     hidden: { x: 0, z: -200, scale: 0.5, opacity: 0, blur: 4, border: 'rgba(255,255,255,0.05)' }
   };
+
+  activeIndex = 0;
+  sub!: Subscription;
+  slides = [
+    {
+      index: 0
+    },
+    {
+      index: 1
+    }
+  ];
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
@@ -107,11 +118,16 @@ export class Engagement {
       content: 'Discover Care2Data engagement architecture and service offerings including solution consulting, PoCs, design & development, and training for clinical data intelligence.'
     });
 
+    this.sub = interval(10000).subscribe(() => {
+      this.activeIndex = (this.activeIndex + 1) % this.slides.length;
+    });
+
     this.checkDevice();
     fromEvent(window, 'resize')
       .pipe(debounceTime(200))
       .subscribe(() => this.checkDevice());
     this.startAutoSlide();
+
   }
 
   checkDevice() {
@@ -123,6 +139,7 @@ export class Engagement {
 
   ngOnDestroy() {
     clearInterval(this.timer);
+    this.sub.unsubscribe();
   }
 
   getPos(i: number) {
@@ -185,4 +202,5 @@ export class Engagement {
     clearInterval(this.timer);
     this.startAutoSlide();
   }
+
 }

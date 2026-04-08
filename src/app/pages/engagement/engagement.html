@@ -1,123 +1,107 @@
 <!-- Hero Section -->
-<section class="bg-[#11193e] text-white py-24 px-6 relative min-h-screen flex items-center">
+<section class="bg-[#11193e] text-white py-24 px-6 relative min-h-screen overflow-hidden">
     <div class="max-w-7xl mx-auto">
+        <div class="flex transition-transform duration-700 ease-in-out"
+            [style.transform]="'translateX(-' + activeIndex * 100 + '%)'">
 
-        <!-- 🔷 HEADER -->
-        <div class="text-center mb-5">
-            <h1
-                class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight my-3 text-white font-heading">
-                Engineering Clinical
-                <i class="block text-yellow-400 mt-2">Data Intelligence</i>
-            </h1>
+            <div *ngFor="let slide of slides;let i = index" class="w-full flex-shrink-0 px-4">
 
-            <p class="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed mb-4">
-                Clinical trial data challenges are not only technical—they are structural.
-            </p>
 
-            <p class="text-lg text-white max-w-5xl mx-auto leading-relaxed mb-4">
-                Care2Data partners with life sciences organizations to embed <strong class="text-secondary">semantic
-                    intelligence, validation &
-                    verification, and governance frameworks</strong> into clinical data operations—without disrupting
-                existing
-                systems.
-            </p>
+                <!-- 🔷 HEADER -->
+                <div class="text-center mb-5" *ngIf="slide.index == 0">
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight my-3 text-white font-heading">
+                        Engineering Clinical
+                        <i class="block text-yellow-400 mt-2">Data Intelligence</i>
+                    </h1>
 
-            <p class="text-lg text-white max-w-5xl mx-auto leading-relaxed">
-                We deliver <strong class="text-secondary">inspection-ready, knowledge-driven data environments</strong>
-                that strengthen regulatory defensibility
-                and submission confidence.
-            </p>
-        </div>
+                    <p class="text-lg md:text-xl text-white max-w-4xl mx-auto leading-relaxed mb-4">
+                        Clinical trial data challenges are not only technical—they are structural.
+                    </p>
 
-        <!-- 🔷 ENGAGEMENT MODEL -->
-        <div class="mb-5">
-            <h3 class="text-2xl md:text-3xl font-semibold text-center mb-5 text-blue-400">
-                How You Can Engage
-            </h3>
+                    <p class="text-lg text-white max-w-5xl mx-auto leading-relaxed mb-4">
+                        Care2Data partners with life sciences organizations to embed <strong
+                            class="text-secondary">semantic
+                            intelligence, validation &
+                            verification, and governance frameworks</strong> into clinical data operations—without
+                        disrupting
+                        existing
+                        systems.
+                    </p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- Advisory -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
-                    <h4 class="text-xl font-semibold mb-3 text-secondary">
-                        Advisory & Architecture
-                    </h4>
-                    <p class="text-white leading-relaxed">
-                        Define knowledge-driven validation strategies
+                    <p class="text-lg text-white max-w-5xl mx-auto leading-relaxed">
+                        We deliver <strong class="text-secondary">inspection-ready, knowledge-driven data
+                            environments</strong>
+                        that strengthen regulatory defensibility
+                        and submission confidence.
                     </p>
                 </div>
 
-                <!-- Implementation -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
-                    <h4 class="text-xl font-semibold mb-3 text-secondary">
-                        Implementation
-                    </h4>
-                    <p class="text-white leading-relaxed">
-                        Deploy semantic intelligence and validation frameworks
-                    </p>
+                <div class="max-w-5xl mx-auto" *ngIf="slide.index == 1">
+                    <!-- 🔷 ENGAGEMENT -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl text-center text-blue-400 mb-5">
+                            How You Can Engage
+                        </h3>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+
+                            <div class="bg-white/5 border rounded-2xl p-6">
+                                <h4 class="text-secondary">Advisory & Architecture</h4>
+                                <p>Define knowledge-driven validation strategies</p>
+                            </div>
+
+                            <div class="bg-white/5 border rounded-2xl p-6">
+                                <h4 class="text-secondary">Implementation</h4>
+                                <p>Deploy semantic intelligence and validation frameworks</p>
+                            </div>
+
+                            <div class="bg-white/5 border rounded-2xl p-6">
+                                <h4 class="text-secondary"> Validation & Verification</h4>
+                                <p>Ensure data quality across the trial lifecycle</p>
+                            </div>
+
+                            <div class="bg-white/5 border rounded-2xl p-6">
+                                <h4 class="text-secondary">Enablement (BOT Model)</h4>
+                                <p>Build, operate, and transfer capabilities</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 🔷 PILLARS -->
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl text-blue-400 mb-4">
+                            Built on Three Pillars
+                        </h3>
+
+                        <p
+                            class="text-xs sm:text-xl font-senibold tracking-wider uppercase font-medium text-yellow-400">
+                            Governance • Intelligence • Defensibility
+                        </p>
+
+                    </div>
                 </div>
 
-                <!-- Validation -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
-                    <h4 class="text-xl font-semibold mb-3 text-secondary">
-                        Validation & Verification
-                    </h4>
-                    <p class="text-white leading-relaxed">
-                        Ensure data quality across the trial lifecycle
-                    </p>
+                <!-- 🔷 CTA -->
+                <div class="text-center">
+                    <button routerLink="/contact-us" class="px-6 py-3 rounded-xl font-semibold uppercase"
+                        style="background-color: var(--btn-primary-color); color: #fff;">
+                        Architect Your Engagement →
+                    </button>
                 </div>
-
-                <!-- BOT -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
-                    <h4 class="text-xl font-semibold mb-3 text-secondary">
-                        Enablement (BOT Model)
-                    </h4>
-                    <p class="text-white leading-relaxed">
-                        Build, operate, and transfer capabilities
-                    </p>
-                </div>
-
             </div>
         </div>
 
-        <!-- 🔷 PILLARS -->
-        <div class="mb-5 text-center">
-            <h3 class="text-2xl md:text-3xl font-semibold mb-5 text-blue-400">
-                Built on Three Pillars
-            </h3>
-
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-lg font-medium">
-
-                <div class="px-6 py-3 bg-white/5 border border-white/10 rounded-xl">
-                    Governance
-                </div>
-
-                <div class="hidden md:block text-blue-400 text-xl">|</div>
-
-                <div class="px-6 py-3 bg-white/5 border border-white/10 rounded-xl">
-                    Intelligence
-                </div>
-
-                <div class="hidden md:block text-blue-400 text-xl">|</div>
-
-                <div class="px-6 py-3 bg-white/5 border border-white/10 rounded-xl">
-                    Defensibility
-                </div>
-
-            </div>
-        </div>
-
-        <!-- 🔷 CTA -->
-        <div class="text-center">
-            <button routerLink="/contact-us"
-                class="text-xs rounded-xl md:text-sm px-6 py-3 cursor-pointer font-semibold transition duration-700 uppercase"
-                style="background-color: var(--btn-primary-color); color: #fff;"
-                onmouseover="this.style.backgroundColor='var(--btn-secondary-color)'; this.style.color='#000';"
-                onmouseout="this.style.backgroundColor='var(--btn-primary-color)'; this.style.color='white';">
-                Architect Your Engagement →
+        <!-- 🔘 DOT INDICATORS -->
+        <div class="flex justify-center mt-8 space-x-3">
+            <button *ngFor="let slide of slides; let i = index" (click)="activeIndex = i"
+                class="w-3 h-3 rounded-full transition-all duration-300" [ngClass]="{
+            'bg-yellow-400 scale-125': activeIndex === i,
+            'bg-white/40': activeIndex !== i
+        }">
             </button>
         </div>
-
     </div>
 </section>
 
@@ -295,7 +279,7 @@
                     <h4 class="text-yellow-400 font-semibold mb-2">
                         1. Structural Clarity & Alignment
                     </h4>
-                    <p class="text-white text-sm">
+                    <p class="text-white text-base md:text-lg">
                         Define expectations, regulatory standards, and structural assumptions across clinical data
                         systems, validation logic, and submission requirements.
                     </p>
@@ -305,7 +289,7 @@
                     <h4 class="text-yellow-400 font-semibold mb-2">
                         2. Controlled Validation (PoCs)
                     </h4>
-                    <p class="text-white text-sm">
+                    <p class="text-white text-base md:text-lg">
                         Validate architectural and validation assumptions through structured PoCs—identifying risks,
                         inconsistencies, and scalability challenges early.
                     </p>
@@ -315,7 +299,7 @@
                     <h4 class="text-yellow-400 font-semibold mb-2">
                         3. Design & Deployment
                     </h4>
-                    <p class="text-white text-sm">
+                    <p class="text-white text-base md:text-lg">
                         Implement semantic models, knowledge architectures, and validation & verification frameworks
                         within existing ecosystems.
                     </p>
@@ -325,7 +309,7 @@
                     <h4 class="text-yellow-400 font-semibold mb-2">
                         4. Governance & Lifecycle Stabilisation
                     </h4>
-                    <p class="text-white text-sm">
+                    <p class="text-white text-base md:text-lg">
                         Establish traceability, governance controls, and lifecycle management frameworks to ensure
                         regulatory alignment and long-term resilience.
                     </p>
@@ -335,7 +319,7 @@
                     <h4 class="text-yellow-400 font-semibold mb-2">
                         5. Capability Transfer & Scale
                     </h4>
-                    <p class="text-white text-sm">
+                    <p class="text-white text-base md:text-lg">
                         Enable teams through training and BOT models to independently operate, extend, and scale
                         clinical data intelligence systems.
                     </p>
